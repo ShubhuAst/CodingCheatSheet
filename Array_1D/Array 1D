@@ -1,7 +1,7 @@
 Array:-
 
 /* fixed size */
-int[] array= null;                         //Create a reference of int array (no arrays created yet)
+int[] array=null;                         //Create a reference of int array (no arrays created yet)
 array = new int[]
 array = new int[size]                // size is variable entered from user or can be passed in code.
 array = new int[n]                   // create new array and now points to array having size n not size.

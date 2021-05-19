@@ -1,7 +1,7 @@
 // Some input cases
 // 2 5 3 7
 // 9 3 6 4
-// 6 9 2 8
+// 8 9 2 1
 // 2 2 2 2
 
 static void findMaxMinANDTheirSecondToo(int[] arr){
@@ -26,7 +26,7 @@ static void findMaxMinANDTheirSecondToo(int[] arr){
 	System.out.println(max+" "+secMax);
 }
 // takes O(n)
-// finding code for min, second min, Third min?.......... DIY :), ping me if stucked.  
+// finding code for min, second min, Third min?.......... DIY :), ping me if stucked.
 
 
 

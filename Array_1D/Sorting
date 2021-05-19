@@ -1,0 +1,28 @@
+// Bubble sort (acending order)
+static void bubbleSort(int arr[]){
+	for(int counter = 0;counter < arr.length-1;counter++){         // the value of counter specify the no. of variable sorted
+		for (int j = 0;j < arr.length-1-counter;j++ ){               // arr.length -1 -counter because we don't need to check for sorted element
+			if(arr[j] > arr[j+1]){                                     // swapping if element j is greater then element at j+1
+				arr[j] = arr[j] + arr[j+1];
+	      arr[j+1] = arr[j] - arr[j+1];
+	      arr[j] = arr[j] - arr[j+1];
+	    }
+	  }
+  }
+}
+// for decending..........DIY :). Ping me if stucked.
+
+
+// insertion sort (acending order)
+static void insertionSort(int arr[]){
+	for (int counter = 1;counter < arr.length ;counter++ ){      // loop starts from 1 bcz we divide array in 2 parts,
+		int val = arr[counter];                                    // sorted part, unsorted part and we assume 1st element is in sorted part.
+	  int j = counter-1;
+	  while(j>=0 && arr[j] > val ){                              // this loops shifts the sorted array so that next un sorted element,
+			arr[j+1] = arr[j];                                       // can be placed in their place
+	    j--;
+	  }
+	  arr[j+1] = val;                                            // placing next unsorted element to appropriate place in sorted part.
+	}
+}
+// for decending..........DIY :). Ping me if stucked.
