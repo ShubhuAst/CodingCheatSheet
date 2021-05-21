@@ -1,4 +1,5 @@
 // input cases:-
+// Here you can't run loop from end, i.e., parameter index = 0 is must;
 // 0 3 1 8 1    --> data: 0 (0)
 // 10 10 10 10  --> data: 10 (3)
 // 1 4 2 5 7    --> data: 3 (-1)
