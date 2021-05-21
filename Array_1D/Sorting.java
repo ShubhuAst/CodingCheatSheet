@@ -51,33 +51,32 @@ static void selectionSort(int arr[]){
 
 // Optimized Selection Sort (acending order)
 static void optimizedSelectionSort(int arr[]){
-		int n = arr.length;
-		for (int i = 0, j = n - 1; i < j; i++, j--){                // i for sort from start, j for sort from end of array --> results loop to run n/2(n->no. of element)
-				int min = arr[i], max = arr[i];                         // keeping track of maximum element and its index, doing same for minimum.
-					int min_i = i, max_i = i;
-					for (int k = i; k <= j; k++){                         // start index from i not 1+1 as ith element can be maximum or minimum. Going till j because after j,
-                                                                // element are sorted from end
-							if (arr[k] > max){
-									max = arr[k];
-									max_i = k;
-							}
-							else if (arr[k] < min){
-									min = arr[k];
-									min_i = k;
-							}
-					}
-
-					swap(arr, i, min_i);
-					if (arr[min_i] == max) swap(arr, j, min_i);            // if my maximum element is swapped with minimum value, but minimum index is still same, So using,
-					                                                       // minimum index to track down new position of maximum element.
-					else swap(arr, j, max_i);
+	int n = arr.length;
+	for (int i = 0, j = n - 1; i < j; i++, j--){                   // i for sort from start, j for sort from end of array --> results loop to run n/2(n->no. of element)
+		int min = arr[i], max = arr[i];                              // keeping track of maximum element and its index, doing same for minimum.
+		int min_i = i, max_i = i;
+		for (int k = i; k <= j; k++){                                // start index from i not 1+1 as ith element can be maximum or minimum. Going till j because after j,
+			                                                           // element are sorted from end
+			if (arr[k] > max){
+				max = arr[k];
+				max_i = k;
 			}
+			else if(arr[k] < min){
+				min = arr[k];
+				min_i = k;
+			}
+		}
+		swap(arr, i, min_i);
+		if (arr[min_i] == max) swap(arr, j, min_i);                 // if my maximum element is swapped with minimum value, but minimum index is still same, So using,
+		                                                            // minimum index to track down new position of maximum element.
+		else swap(arr, j, max_i);
+	}
 }
 
 static void swap(int arr[], int i,int j){
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
+	int temp = arr[i];
+	arr[i] = arr[j];
+	arr[j] = temp;
 }
 // for decending..........DIY :). Ping me if stucked.
 
